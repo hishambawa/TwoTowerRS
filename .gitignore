@@ -1,0 +1,11 @@
+# virtual environment
+.venv
+
+# os files
+**/.DS_Store
+
+# python files
+**/__pycache__
+
+# datasets
+src/data/**
