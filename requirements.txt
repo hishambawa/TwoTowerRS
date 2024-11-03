@@ -1,0 +1,5 @@
+tf-keras==2.15.0
+tensorflow==2.15.0
+tensorflow_recommenders==0.7.2
+tensorflow-datasets==4.9.4
+structlog==24.4.0
