@@ -2,8 +2,8 @@ import tensorflow as tf
 import tensorflow_recommenders as tfrs
 import numpy as np
 
-from seqrec.utils.logger import BasicLogger
-from seqrec.modules.data_loader import DataLoader
+from ttrs.utils.logger import BasicLogger
+from ttrs.modules.data_loader import DataLoader
 
 class RecommendationSystem:
     def __init__(self, data_loader: DataLoader, logger:BasicLogger, model=None):

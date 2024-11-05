@@ -1,7 +1,7 @@
 import tensorflow as tf
 import tensorflow_recommenders as tfrs
 
-from seqrec.modules.data_loader import DataLoader
+from ttrs.modules.data_loader import DataLoader
 
 class Towers:
 

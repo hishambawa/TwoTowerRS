@@ -1,4 +1,4 @@
-from seqrec.config.appsettings import AppSettings
+from ttrs.config.appsettings import AppSettings
 
 import tensorflow as tf
 import numpy as np
