@@ -1,8 +1,8 @@
-from modules import Model, DataLoader, RecommendationSystem, Towers
+from seqrec.modules import Model, DataLoader, RecommendationSystem, Towers
 
-from config.appsettings import AppSettings
+from seqrec.config.appsettings import AppSettings
 
-from utils.logger import BasicLogger
+from seqrec.utils.logger import BasicLogger
 
 # initialize logger
 logger = BasicLogger("debug")

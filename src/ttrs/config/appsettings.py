@@ -8,7 +8,7 @@ class AppSettings:
     item_file_path: str = "data/movies.dat"
     train_batch_size: int = 12800
     test_batch_size: int = 2560
-    max_context_length: int = 20
+    max_context_length: int = 10
 
     # model config
     epochs: int = 3

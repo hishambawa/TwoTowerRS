@@ -1,10 +1,10 @@
 import tensorflow_recommenders as tfrs
 import tensorflow as tf
 
-from config.appsettings import AppSettings
-from modules.data_loader import DataLoader
-from modules.towers import Towers
-from utils.logger import BasicLogger
+from seqrec.config.appsettings import AppSettings
+from seqrec.modules.data_loader import DataLoader
+from seqrec.modules.towers import Towers
+from seqrec.utils.logger import BasicLogger
 
 class Model(tfrs.Model):
 

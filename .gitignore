@@ -8,4 +8,7 @@
 **/__pycache__
 
 # datasets
-src/data/**
+src/ttrs/data/**
+
+# packages
+ttrs.egg-info

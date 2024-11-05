@@ -2,8 +2,8 @@ import tensorflow as tf
 import tensorflow_recommenders as tfrs
 import numpy as np
 
-from utils.logger import BasicLogger
-from modules.data_loader import DataLoader
+from seqrec.utils.logger import BasicLogger
+from seqrec.modules.data_loader import DataLoader
 
 class RecommendationSystem:
     def __init__(self, data_loader: DataLoader, logger:BasicLogger, model=None):
@@ -72,7 +72,15 @@ class RecommendationSystem:
             if len(result) == k:
                 break
 
-        return result
+        
+        # extract movie_ids from the results list
+        movie_ids = [movie_id for _, movie_id, _ in result]
+
+        # convert the final results to a dataframe
+        # based on the item data
+        result_df = self.data_loader.raw_item_data[self.data_loader.raw_item_data['movie_id'].isin(movie_ids)]
+
+        return result_df[['movie_title', 'movie_id', 'genre']]
 
     def save(self):
       # the model must be called atleast once before saving

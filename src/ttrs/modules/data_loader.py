@@ -1,4 +1,4 @@
-from config.appsettings import AppSettings
+from seqrec.config.appsettings import AppSettings
 
 import tensorflow as tf
 import numpy as np
@@ -9,7 +9,7 @@ class DataLoader:
     def __init__(self, config: AppSettings):
         self.config = config
         self.trainset, self.testset = self._process_train_test_data()
-        self.items, self.item_ids, self.item_data = self._process_movie_data()
+        self.items, self.item_ids, self.item_data, self.raw_item_data = self._process_movie_data()
 
     def get_items(self):
         return self.items
@@ -76,4 +76,4 @@ class DataLoader:
         data = {row["movie_id"]: (row["movie_title"], row["genre"])
                             for _, row in raw_movies_df.iterrows()}
         
-        return movies, unique_movie_ids, data
+        return movies, unique_movie_ids, data, raw_movies_df
